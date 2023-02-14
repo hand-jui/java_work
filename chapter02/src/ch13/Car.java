@@ -19,9 +19,9 @@ public abstract class Car {
 	private void turnOff() {
 		System.out.println("시동을 끕니다.");
 	}
-	
+
 	public abstract void wiper();
-	
+
 //	후크 메서드 -> 실행의 흐름에는 넣어줄테니 원한다면 사용
 	public void washCar() {
 //		아무것도 구현하지 않음-> 일반 메서드

@@ -11,6 +11,5 @@ public class MainTest1 {
 		ManualCar manualCar = new ManualCar();
 		manualCar.run();
 
-
 	}
 }
