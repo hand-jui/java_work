@@ -16,7 +16,7 @@ public class BorderLayoutEx2 extends JFrame {
 //	JButton button2 = new JButton("서");
 //	JButton button3 = new JButton("남");
 //	JButton button4 = new JButton("북");
-//	JButton button5 = new JButton("센터");
+//	JButton button5 = new JButton("센터");ㅁ
 
 	public BorderLayoutEx2() {
 		initData();

@@ -1,7 +1,5 @@
 package ch01;
 
-import java.awt.BorderLayout;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -41,6 +39,7 @@ public class NoLayoutEx1 extends JFrame {
 		add(button3);
 		setVisible(true);
 	}
+
 	public static void main(String[] args) {
 		new NoLayoutEx1();
 	}

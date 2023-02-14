@@ -26,7 +26,7 @@ public class FlowLayoutEx3 extends JFrame {
 //	배치관리자 FlowLayout 멤버 변수로 선언
 
 //	화면에 Component를 그려라
-	
+
 //	생성자는 메모리에 올라갈 때 처음 실행되는 코드
 //	구현부 안에서 순서 중요함!!!
 	public FlowLayoutEx3() {
