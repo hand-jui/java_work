@@ -25,6 +25,8 @@ public class MyFrame2 extends JFrame {
 			g.drawString("☆", 300, 50);
 			g.drawString("★", 500, 250);
 			g.drawString("☆", 450, 30);
+			g.drawString("👧", 500, 30);
+			
 			g.drawLine(0, 450, 150, 450);
 			g.drawLine(450, 450, 600, 450);
 
