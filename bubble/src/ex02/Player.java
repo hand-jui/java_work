@@ -1,4 +1,4 @@
-package ex01;
+package ex02;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -22,6 +22,15 @@ public class Player extends JLabel implements Moveable {
 	public Player() {
 		initData();
 		setInitLayout();
+	}
+
+//	setter 메서드 만들기 left, right
+	public void setLeft(boolean left) {
+		this.left = left;
+	}
+
+	public void setRight(boolean right) {
+		this.right = right;
 	}
 
 	private void initData() {
@@ -89,13 +98,47 @@ public class Player extends JLabel implements Moveable {
 	@Override
 	public void up() {
 		System.out.println("점프!");
+		up = true;
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				for (int i = 0; i < 120 / JUMPSPEED; i++) {
+					y -= JUMPSPEED;
+					setLocation(x, y);
+					try {
+						Thread.sleep(5);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				} // end of for
+
+				up = false;
+				down();
+			}
+		}).start();
 
 	}
 
 	@Override
 	public void down() {
-		System.out.println("p down");
+		down = true;
+		new Thread(new Runnable() {
 
+			@Override
+			public void run() {
+				for (int i = 0; i < 120 / JUMPSPEED; i++) {
+					y += JUMPSPEED;
+					setLocation(x, y);
+					try {
+						Thread.sleep(3);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				} // end of for
+				down = false;
+//				!!상태 값을 다룰 때는 상황이 변하면 초기화 처리를 잘해야함!!
+			}
+		}).start();
 	}
 
 }
