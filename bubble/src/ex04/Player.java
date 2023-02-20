@@ -178,6 +178,11 @@ public class Player extends JLabel implements Moveable {
 					y = y + JUMPSPEED;
 					setLocation(x, y);
 					down = false;
+					try {
+						Thread.sleep(3);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
 				} // end of while
 //				!!상태 값을 다룰 때는 상황이 변하면 초기화 처리를 잘해야함!!
 			}
