@@ -1,4 +1,4 @@
-package ex06;
+package ex07;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -22,13 +22,15 @@ public class Bubble extends JLabel implements Moveable {
 	private ImageIcon bomb; // 물방울이 터진 상태 이미지
 
 	private Player player;
+	private BackgroundBubbleService backgroundBubbleService;
 
 //	버블은 플레이어에 의존하고 있다
 	public Bubble(Player player) {
 		this.player = player;
 		initData();
 		setInitLayout();
-		initThread();
+		backgroundBubbleService = new BackgroundBubbleService(this);
+		initThread(); // in -> left() --> backgroundBubbleService.leftWall()
 	}
 
 	private void initData() {
@@ -72,6 +74,11 @@ public class Bubble extends JLabel implements Moveable {
 		for (int i = 0; i < 400; i++) {
 			x--;
 			setLocation(x, y);
+//			위치 체크 왼쪽 벽이면 break;
+			System.out.println(backgroundBubbleService.leftWall());
+			if (backgroundBubbleService.leftWall()) {
+				break;
+			}
 			try {
 				Thread.sleep(1);
 			} catch (InterruptedException e) {
@@ -87,6 +94,9 @@ public class Bubble extends JLabel implements Moveable {
 		for (int i = 0; i < 400; i++) {
 			x++;
 			setLocation(x, y);
+			if (backgroundBubbleService.rightWall()) {
+				break;
+			}
 			try {
 				Thread.sleep(1);
 			} catch (InterruptedException e) {
@@ -103,6 +113,9 @@ public class Bubble extends JLabel implements Moveable {
 		while (true) {
 			y--;
 			setLocation(x, y);
+			if(backgroundBubbleService.topWall()) {
+				break;
+			}
 			try {
 				Thread.sleep(1);
 			} catch (InterruptedException e) {
@@ -111,4 +124,5 @@ public class Bubble extends JLabel implements Moveable {
 			}
 		}
 	}
+
 }
