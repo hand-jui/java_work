@@ -43,7 +43,7 @@ public class ClientTest2 {
 				bufferedWriter.write(input);
 				bufferedWriter.newLine();
 				bufferedWriter.flush();
-				System.out.println("클라이언트>>서버" + input);
+				System.out.println("클라이언트>>서버 " + input);
 			}
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
