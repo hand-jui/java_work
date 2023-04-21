@@ -32,7 +32,7 @@ public class MainTest8 {
 		// 변수 i와 d, 관계 연산자를 사용해서 result2 변수를
 		// 선언하고 변수에 true 값이 담기도록 식을 만들고
 		// 출력하세요
-		boolean result2= i < d;
+		boolean result2 = i < d;
 		System.out.println(result2);
 
 		int num1 = 10;

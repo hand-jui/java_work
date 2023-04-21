@@ -7,7 +7,6 @@ public class GameTest {
 		warrior.attack(20);
 		wizard.defenceMiss();
 		wizard.defence();
-		
 
 		wizard.attackMiss();
 		warrior.attackMiss();

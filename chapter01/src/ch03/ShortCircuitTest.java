@@ -12,16 +12,14 @@ public class ShortCircuitTest {
 		System.out.println("======");
 		System.out.println(num1);
 		System.out.println(i);
-		
+
 		System.out.println("======");
-//						25	 ||	4  ->	T
-		value=((num1+=10)<10)||((i+=2)<10);
+//							  25	||	  4  ->	T
+		value = ((num1 += 10) < 10) || ((i += 2) < 10);
 		System.out.println(value);
-		
+
 //		Q. shortCircuit 평가 문제를 직접 2문제 만들기
-			
-		
-		
+
 	} // end of main
 
 } // end of class

@@ -18,11 +18,11 @@ public class Student {
 		targetBus.take(1_000);
 		this.money = this.money - 1000;
 	}
-	
+
 	public void takeAreaBus(Bus targetAreaBus) {
 		System.out.println("takeAreaBus 메서드 실행됨");
 		targetAreaBus.take(1_500);
-		this.money-=1500;
+		this.money -= 1500;
 	}
 
 //	학생이 지하철을 탄다

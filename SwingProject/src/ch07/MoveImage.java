@@ -11,7 +11,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class MoveImage extends JFrame implements Moveable ,ActionListener{
+public class MoveImage extends JFrame implements Moveable, ActionListener {
 
 	private ImagePanel imagePanel;
 	private int imageX;
